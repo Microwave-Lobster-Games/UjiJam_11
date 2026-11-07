@@ -2,6 +2,8 @@ extends CharacterBody3D
 class_name Player
 
 @export var SENSITIVITY: float = 0.1
+var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
+
 @onready var eye_lids = $EyeLids
 @onready var animation: AnimatedSprite3D = $AnimatedSprite3D
 
@@ -33,6 +35,9 @@ func open_close_eyes(open : bool):
 	emit_signal("eyes_changed", open)
 
 func _physics_process(_delta: float) -> void:
+	if not is_on_floor():
+		velocity.y -= gravity * _delta
+		
 	var input_dir := Input.get_vector("movement_left", "movement_right", "movement_up", "movement_down")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
