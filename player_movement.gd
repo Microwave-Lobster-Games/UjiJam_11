@@ -1,7 +1,9 @@
 extends CharacterBody3D
+class_name Player
 
 @export var SENSITIVITY: float = 0.1
 @onready var eye_lids = $EyeLids
+signal eyes_changed(open : bool)
 
 var eyes_closed = false
 
@@ -26,6 +28,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func open_close_eyes(open : bool):
 	eye_lids.visible = open
+	emit_signal("eyes_changed", open)
 
 func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("movement_left", "movement_right", "movement_up", "movement_down")
