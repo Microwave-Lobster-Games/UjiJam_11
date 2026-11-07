@@ -59,7 +59,7 @@ color = Color(0, 0, 0, 1)
 environment = SubResource("Environment_fg4av")
 
 [node name="Monster" type="Sprite3D" parent="." unique_id=235989631 node_paths=PackedStringArray("player")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0267968, -8.60475)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.0267968, -13.60475)
 billboard = 1
 shaded = true
 texture = ExtResource("2_6a6d0")
