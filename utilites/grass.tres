@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dno1rxmv3hgwn"]
+
+[ext_resource type="Shader" uid="uid://b8ygwkk5hego8" path="res://utilites/grass.gdshader" id="1_r2ebt"]
+[ext_resource type="Texture2D" uid="uid://dqth8ocuvrss8" path="res://assets/grass.tres" id="2_lhop8"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_r2ebt")
+shader_parameter/atlas_texture = ExtResource("2_lhop8")
+shader_parameter/atlas_columns = 3
