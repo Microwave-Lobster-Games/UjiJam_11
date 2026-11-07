@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://df3mtjfkkaew2"]
 
 [ext_resource type="Script" uid="uid://61osqrps1bvk" path="res://player_movement.gd" id="1_6t3sc"]
+[ext_resource type="PackedScene" uid="uid://cygwpncigoadm" path="res://key.tscn" id="1_j6yf4"]
 [ext_resource type="Texture2D" uid="uid://b3qx7gkxvoak0" path="res://icon.svg" id="2_6a6d0"]
 [ext_resource type="Script" uid="uid://d0c450vqddqo5" path="res://monster_controller.gd" id="3_hg5i0"]
 
@@ -16,6 +17,9 @@ background_mode = 1
 background_color = Color(0.096204735, 0.09620475, 0.096204735, 1)
 
 [node name="MainForest" type="Node3D" unique_id=2076514014]
+
+[node name="Key" parent="." unique_id=1918541471 instance=ExtResource("1_j6yf4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.488107, 0, -0.09517431)
 
 [node name="Floor" type="MeshInstance3D" parent="." unique_id=219060658]
 mesh = SubResource("PlaneMesh_fg4av")

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cygwpncigoadm"]
+
+[ext_resource type="Script" uid="uid://xvqplo7ej8l0" path="res://key_controller.gd" id="1_p0yg6"]
+[ext_resource type="Texture2D" uid="uid://b3qx7gkxvoak0" path="res://icon.svg" id="2_krfvd"]
+
+[node name="Key" type="Node3D" unique_id=1918541471]
+script = ExtResource("1_p0yg6")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=2013479939]
+billboard = 1
+shaded = true
+texture = ExtResource("2_krfvd")
+
+[node name="AreaLight3D" type="AreaLight3D" parent="Sprite3D" unique_id=592286999]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.4605002)
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="." unique_id=1525593161]
+
+[node name="OmniLight3D" type="SpotLight3D" parent="." unique_id=685138759]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -1.2125975, 0)
+spot_range = 10.0
+spot_angle = 10.0
