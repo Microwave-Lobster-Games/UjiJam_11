@@ -3,7 +3,7 @@ extends Node
 var activated_keys: int = 0
 var is_door_open: bool = false
 @export var end_game_text: PackedScene
-
+var paranoia_fill_speed: float = 5.0
 
 func _process(_delta: float) -> void:
 	if activated_keys == 3 and not is_door_open: 

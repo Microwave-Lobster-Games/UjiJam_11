@@ -3,6 +3,7 @@ extends Node3D
 @onready var visible_on_screen: VisibleOnScreenNotifier3D = $VisibleOnScreenNotifier3D
 @export var height: float = 10.0
 @onready var player: Player = %Player
+@onready var monster: Sprite3D = %Monster
 
 var key_tween: Tween = null
 var is_activated: bool = false
@@ -22,6 +23,8 @@ func _process(_delta: float) -> void:
 
 	if is_player_close and is_looking_at_it and not player.eyes_closed:
 		if not is_moving_down and position.y > 1.0:
+			monster.dissapear()
+			monster.spawn_dissapear(false)
 			start_moving_down()
 	else:
 		if position.y < height:
@@ -41,7 +44,10 @@ func _on_activation_finished() -> void:
 	if is_activated or global_position.distance_to(player.global_position) > 10.0:
 		return
 	is_activated = true
+	monster.far_light.omni_range += 10
+	monster.close_light.omni_range += 5
 	GameManager.activated_keys += 1
+	GameManager.paranoia_fill_speed += 10
 
 func key_reset(open: bool) -> void:
 	if open or is_activated: return

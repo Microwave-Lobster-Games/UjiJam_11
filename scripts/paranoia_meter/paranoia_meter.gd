@@ -2,7 +2,7 @@ class_name ParanoiaMeter
 extends Slider
 
 const MAX_METER: float = 10.0
-const FILL_SPEED: float = 1.0
+var FILL_SPEED: float = 5.0
 const DRAIN_SPEED: float = 1.0
 
 var current_meter: float = 0.0
@@ -14,7 +14,7 @@ var punish_timer: float = 0.0
 func _ready() -> void:
 	max_value = MAX_METER
 	value = current_meter
-	
+	FILL_SPEED = GameManager.paranoia_fill_speed
 	if player:
 		player.eyes_changed.connect(_on_eyes_changed)
 
