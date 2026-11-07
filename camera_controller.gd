@@ -16,7 +16,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		twist_input -= event.screen_relative.x * SENSITIVITY
 		pitch_input -= event.screen_relative.y * SENSITIVITY
 		pitch_input = clamp(pitch_input, -85, 85)
-
+	elif event.is_action_pressed("escape"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _process(delta: float) -> void:
 	var current_q = basis.get_rotation_quaternion()
