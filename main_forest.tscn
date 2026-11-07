@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://df3mtjfkkaew2"]
 
 [ext_resource type="Script" uid="uid://61osqrps1bvk" path="res://scripts/player/player_movement.gd" id="1_6t3sc"]
-[ext_resource type="Texture2D" uid="uid://b3qx7gkxvoak0" path="res://icon.svg" id="2_6a6d0"]
 [ext_resource type="Texture2D" uid="uid://bym35r1fsk008" path="res://assets/player_walkcycle.png" id="2_rsymn"]
 [ext_resource type="Script" uid="uid://d0c450vqddqo5" path="res://scripts/monster/monster_controller.gd" id="3_hg5i0"]
+[ext_resource type="Texture2D" uid="uid://dspctmntvndev" path="res://assets/tallman.png" id="3_rsymn"]
 [ext_resource type="PackedScene" uid="uid://500v635k66na" path="res://prefabs/key.tscn" id="4_7eaa3"]
 [ext_resource type="PackedScene" uid="uid://7157sbc22ooq" path="res://prefabs/mirror/mirror.tscn" id="5_7eaa3"]
 [ext_resource type="Script" uid="uid://dmdefpf8txs8q" path="res://scripts/utilites/TreeSeeder.gd" id="6_78ajd"]
@@ -16,21 +16,21 @@ size = Vector2(40, 40)
 atlas = ExtResource("2_rsymn")
 region = Rect2(0, 0, 404, 1472)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nmxcf"]
-atlas = ExtResource("2_rsymn")
-region = Rect2(0, 0, 404, 1472)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_wk2iq"]
 atlas = ExtResource("2_rsymn")
 region = Rect2(404, 0, 404, 1472)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7jcw7"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmxcf"]
 atlas = ExtResource("2_rsymn")
-region = Rect2(808, 0, 404, 1472)
+region = Rect2(0, 0, 404, 1472)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8n4wc"]
 atlas = ExtResource("2_rsymn")
 region = Rect2(1212, 0, 404, 1472)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7jcw7"]
+atlas = ExtResource("2_rsymn")
+region = Rect2(808, 0, 404, 1472)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rsymn"]
 animations = [{
@@ -44,16 +44,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nmxcf")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_wk2iq")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7jcw7")
+"texture": SubResource("AtlasTexture_nmxcf")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8n4wc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7jcw7")
 }],
 "loop": 1,
 "name": &"walking",
@@ -92,6 +92,7 @@ script = ExtResource("1_6t3sc")
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Player" unique_id=227793922]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
 sprite_frames = SubResource("SpriteFrames_rsymn")
+animation = &"walking"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player" unique_id=1635029391]
 visible = false
@@ -131,10 +132,10 @@ color = Color(0, 0, 0, 1)
 environment = SubResource("Environment_fg4av")
 
 [node name="Monster" type="Sprite3D" parent="." unique_id=235989631 node_paths=PackedStringArray("player")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.0267968, -13.60475)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1, 2.009534, -11.440983)
 billboard = 1
 shaded = true
-texture = ExtResource("2_6a6d0")
+texture = ExtResource("3_rsymn")
 script = ExtResource("3_hg5i0")
 player = NodePath("../Player")
 speed = 25.0
