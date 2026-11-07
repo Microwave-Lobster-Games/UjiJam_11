@@ -42,6 +42,18 @@ light_color = Color(0.8156863, 0.5058824, 0.34901962, 1)
 light_energy = 0.75
 omni_attenuation = 1.079
 
+[node name="EyeLids" type="CanvasLayer" parent="Player" unique_id=558163236]
+visible = false
+
+[node name="TextureRect" type="ColorRect" parent="Player/EyeLids" unique_id=266548848]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1387247104]
 environment = SubResource("Environment_fg4av")
 

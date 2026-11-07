@@ -1,6 +1,9 @@
 extends CharacterBody3D
 
 @export var SENSITIVITY: float = 0.1
+@onready var eye_lids = $EyeLids
+
+var eyes_closed = false
 
 var twist_input: float = 0.0
 var pitch_input: float = 0.0
@@ -14,6 +17,15 @@ func _unhandled_input(event: InputEvent) -> void:
 		twist_input -= event.screen_relative.x * SENSITIVITY
 		pitch_input -= event.screen_relative.y * SENSITIVITY
 		pitch_input = clamp(pitch_input, -85, 85)
+	
+	if event is InputEventMouseButton:
+		if event.get_button_index() == 1: #left click
+			eyes_closed = !eyes_closed
+			open_close_eyes(eyes_closed)
+			
+
+func open_close_eyes(open : bool):
+	eye_lids.visible = open
 
 func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("movement_left", "movement_right", "movement_up", "movement_down")
@@ -33,3 +45,4 @@ func _process(delta: float) -> void:
 	var pitch_q = Quaternion(Vector3.RIGHT, deg_to_rad(pitch_input))
 	var smoothed_q = current_q.slerp(twist_q * pitch_q, delta * 20.0)
 	basis = Basis(smoothed_q)
+	
