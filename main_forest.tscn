@@ -11,6 +11,7 @@
 [ext_resource type="ArrayMesh" uid="uid://c0oaadfxktxpo" path="res://assets/somna_map.obj" id="8_wk2iq"]
 [ext_resource type="Material" uid="uid://dno1rxmv3hgwn" path="res://utilites/grass.tres" id="10_wk2iq"]
 [ext_resource type="Script" uid="uid://ce8lht70yr6tx" path="res://scripts/paranoia_meter/paranoia_meter.gd" id="11_7jcw7"]
+[ext_resource type="Texture2D" uid="uid://dbh32byaorw4p" path="res://assets/stars.png" id="12_8n4wc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hecbf"]
 atlas = ExtResource("2_rsymn")
@@ -99,6 +100,296 @@ buffer = PackedFloat32Array(-0.03489673, 0, -0.7153066, -49.591618, 0, 0.7161573
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0771925, 0)
 script = ExtResource("1_6t3sc")
+
+[node name="Stars" type="Node" parent="Player" unique_id=1139733255]
+
+[node name="Sprite3D" type="Sprite3D" parent="Player/Stars" unique_id=490104197]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -55.851044, 53.51454, -51.287342)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Player/Stars" unique_id=377104833]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -26.19374, 53.51454, -51.287342)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Player/Stars" unique_id=1948778381]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -55.851044, 53.51454, -28.727516)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D4" type="Sprite3D" parent="Player/Stars" unique_id=182624420]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -26.19374, 53.51454, -28.727516)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D5" type="Sprite3D" parent="Player/Stars" unique_id=61766545]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -8.450041, 53.51454, -47.231636)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D6" type="Sprite3D" parent="Player/Stars" unique_id=561121203]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 21.207262, 53.51454, -47.231636)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D7" type="Sprite3D" parent="Player/Stars" unique_id=1871327912]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -8.450041, 53.51454, -24.671812)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D8" type="Sprite3D" parent="Player/Stars" unique_id=1041374702]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 21.207262, 53.51454, -24.671812)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D9" type="Sprite3D" parent="Player/Stars" unique_id=1888732900]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -51.034897, 53.51454, -24.925299)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D10" type="Sprite3D" parent="Player/Stars" unique_id=440780585]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -21.377594, 53.51454, -24.925299)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D11" type="Sprite3D" parent="Player/Stars" unique_id=539602629]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -51.034897, 53.51454, -2.3654728)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D12" type="Sprite3D" parent="Player/Stars" unique_id=282434352]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -21.377594, 53.51454, -2.3654728)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D13" type="Sprite3D" parent="Player/Stars" unique_id=1218909389]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -56.61148, 53.51454, 2.7041626)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D14" type="Sprite3D" parent="Player/Stars" unique_id=729363712]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -26.954178, 53.51454, 2.7041626)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D15" type="Sprite3D" parent="Player/Stars" unique_id=1161820929]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -56.61148, 53.51454, 25.263988)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D16" type="Sprite3D" parent="Player/Stars" unique_id=1667383409]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -26.954178, 53.51454, 25.263988)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D17" type="Sprite3D" parent="Player/Stars" unique_id=1360647453]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -9.210478, 53.51454, 6.7598686)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D18" type="Sprite3D" parent="Player/Stars" unique_id=2008839787]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 20.446825, 53.51454, 6.7598686)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D19" type="Sprite3D" parent="Player/Stars" unique_id=2001305072]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -9.210478, 53.51454, 29.319693)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D20" type="Sprite3D" parent="Player/Stars" unique_id=1667008735]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 20.446825, 53.51454, 29.319693)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D21" type="Sprite3D" parent="Player/Stars" unique_id=1311395274]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -51.795334, 53.51454, 29.066206)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D22" type="Sprite3D" parent="Player/Stars" unique_id=1679309174]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -22.138031, 53.51454, 29.066206)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D23" type="Sprite3D" parent="Player/Stars" unique_id=256184936]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -51.795334, 53.51454, 51.62603)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D24" type="Sprite3D" parent="Player/Stars" unique_id=1524925018]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -22.138031, 53.51454, 51.62603)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D25" type="Sprite3D" parent="Player/Stars" unique_id=789216899]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 4.9844666, 53.51454, 2.7041626)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D26" type="Sprite3D" parent="Player/Stars" unique_id=1488160115]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 34.64177, 53.51454, 2.7041626)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D27" type="Sprite3D" parent="Player/Stars" unique_id=2071773736]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 4.9844666, 53.51454, 25.263988)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D28" type="Sprite3D" parent="Player/Stars" unique_id=1322457301]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 34.64177, 53.51454, 25.263988)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D29" type="Sprite3D" parent="Player/Stars" unique_id=1532701998]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 52.385468, 53.51454, 6.7598686)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D30" type="Sprite3D" parent="Player/Stars" unique_id=229535693]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 82.04277, 53.51454, 6.7598686)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D31" type="Sprite3D" parent="Player/Stars" unique_id=1123240611]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 52.385468, 53.51454, 29.319693)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D32" type="Sprite3D" parent="Player/Stars" unique_id=2027232360]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 82.04277, 53.51454, 29.319693)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D33" type="Sprite3D" parent="Player/Stars" unique_id=1091147418]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 9.800613, 53.51454, 29.066206)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D34" type="Sprite3D" parent="Player/Stars" unique_id=104615574]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 39.457916, 53.51454, 29.066206)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D35" type="Sprite3D" parent="Player/Stars" unique_id=499292188]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 9.800613, 53.51454, 51.62603)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D36" type="Sprite3D" parent="Player/Stars" unique_id=946984819]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 39.457916, 53.51454, 51.62603)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D37" type="Sprite3D" parent="Player/Stars" unique_id=1030953430]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -7.915695, 53.51454, -92.67036)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D38" type="Sprite3D" parent="Player/Stars" unique_id=373871754]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 21.741608, 53.51454, -92.67036)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D39" type="Sprite3D" parent="Player/Stars" unique_id=424436467]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -7.915695, 53.51454, -70.110535)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D40" type="Sprite3D" parent="Player/Stars" unique_id=1060955067]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 21.741608, 53.51454, -70.110535)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D41" type="Sprite3D" parent="Player/Stars" unique_id=1312316547]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 39.485306, 53.51454, -88.614655)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D42" type="Sprite3D" parent="Player/Stars" unique_id=395455520]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 69.14261, 53.51454, -88.614655)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D43" type="Sprite3D" parent="Player/Stars" unique_id=674574198]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 39.485306, 53.51454, -66.054825)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D44" type="Sprite3D" parent="Player/Stars" unique_id=886857214]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 69.14261, 53.51454, -66.054825)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D45" type="Sprite3D" parent="Player/Stars" unique_id=941134295]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -3.0995483, 53.51454, -66.30831)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D46" type="Sprite3D" parent="Player/Stars" unique_id=1902125601]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 26.557755, 53.51454, -66.30831)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D47" type="Sprite3D" parent="Player/Stars" unique_id=52826394]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -3.0995483, 53.51454, -43.74849)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D48" type="Sprite3D" parent="Player/Stars" unique_id=769950196]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 26.557755, 53.51454, -43.74849)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D49" type="Sprite3D" parent="Player/Stars" unique_id=280365528]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -8.676132, 53.51454, -38.678852)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D50" type="Sprite3D" parent="Player/Stars" unique_id=1146897315]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 20.98117, 53.51454, -38.678852)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D51" type="Sprite3D" parent="Player/Stars" unique_id=1851518164]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -8.676132, 53.51454, -16.119026)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D52" type="Sprite3D" parent="Player/Stars" unique_id=1904440722]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 20.98117, 53.51454, -16.119026)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D53" type="Sprite3D" parent="Player/Stars" unique_id=280404713]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 38.72487, 53.51454, -34.623146)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D54" type="Sprite3D" parent="Player/Stars" unique_id=1035816541]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 68.38217, 53.51454, -34.623146)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D55" type="Sprite3D" parent="Player/Stars" unique_id=1286003268]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 38.72487, 53.51454, -12.063322)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D56" type="Sprite3D" parent="Player/Stars" unique_id=1736919119]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 68.38217, 53.51454, -12.063322)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D57" type="Sprite3D" parent="Player/Stars" unique_id=1311478140]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -3.8599854, 53.51454, -12.316809)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D58" type="Sprite3D" parent="Player/Stars" unique_id=510949267]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 25.797318, 53.51454, -12.316809)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D59" type="Sprite3D" parent="Player/Stars" unique_id=1896127978]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -3.8599854, 53.51454, 10.243015)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D60" type="Sprite3D" parent="Player/Stars" unique_id=1990468122]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 25.797318, 53.51454, 10.243015)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D61" type="Sprite3D" parent="Player/Stars" unique_id=277257174]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 52.919815, 53.51454, -38.678852)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D62" type="Sprite3D" parent="Player/Stars" unique_id=864772852]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 82.57712, 53.51454, -38.678852)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D63" type="Sprite3D" parent="Player/Stars" unique_id=1842624865]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 52.919815, 53.51454, -16.119026)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D64" type="Sprite3D" parent="Player/Stars" unique_id=1051663758]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 82.57712, 53.51454, -16.119026)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D65" type="Sprite3D" parent="Player/Stars" unique_id=519265354]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 100.320816, 53.51454, -34.623146)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D66" type="Sprite3D" parent="Player/Stars" unique_id=2109016289]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 129.97812, 53.51454, -34.623146)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D67" type="Sprite3D" parent="Player/Stars" unique_id=1926426978]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 100.320816, 53.51454, -12.063322)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D68" type="Sprite3D" parent="Player/Stars" unique_id=1226049845]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 129.97812, 53.51454, -12.063322)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D69" type="Sprite3D" parent="Player/Stars" unique_id=356542873]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 57.735962, 53.51454, -12.316809)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D70" type="Sprite3D" parent="Player/Stars" unique_id=1935153368]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 87.393265, 53.51454, -12.316809)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D71" type="Sprite3D" parent="Player/Stars" unique_id=916336176]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 57.735962, 53.51454, 10.243015)
+texture = ExtResource("12_8n4wc")
+
+[node name="Sprite3D72" type="Sprite3D" parent="Player/Stars" unique_id=1118354629]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 87.393265, 53.51454, 10.243015)
+texture = ExtResource("12_8n4wc")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Player" unique_id=227793922]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
@@ -217,6 +508,7 @@ tree_height = 0.92
 ground_node = NodePath("../SomnaMap/StaticBody3D")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=998462144]
+layer = 2
 
 [node name="VSlider" type="VSlider" parent="CanvasLayer" unique_id=948083726 node_paths=PackedStringArray("player")]
 anchors_preset = 6
