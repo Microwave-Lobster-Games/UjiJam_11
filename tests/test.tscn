@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dljerktvu0efg"]
 
-[ext_resource type="Script" uid="uid://61osqrps1bvk" path="res://player_movement.gd" id="1_o7al6"]
-[ext_resource type="Texture2D" uid="uid://b3qx7gkxvoak0" path="res://icon.svg" id="2_vqx7l"]
-[ext_resource type="Script" uid="uid://d0c450vqddqo5" path="res://monster_controller.gd" id="3_ayauq"]
-[ext_resource type="Script" uid="uid://ce8lht70yr6tx" path="res://scripts/paranoia_meter/paranoia_meter.gd" id="4_f38lv"]
+[ext_resource type="Script" uid="uid://61osqrps1bvk" path="res://player_movement.gd" id="1_ry45r"]
+[ext_resource type="Texture2D" uid="uid://b3qx7gkxvoak0" path="res://icon.svg" id="2_dsb46"]
+[ext_resource type="Script" uid="uid://d0c450vqddqo5" path="res://monster_controller.gd" id="3_uofsi"]
+[ext_resource type="Script" uid="uid://ce8lht70yr6tx" path="res://scripts/paranoia_meter/paranoia_meter.gd" id="4_jenrn"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_fg4av"]
 size = Vector2(40, 40)
@@ -23,7 +23,7 @@ mesh = SubResource("PlaneMesh_fg4av")
 
 [node name="Player" type="CharacterBody3D" parent="." unique_id=754353529]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0771925, 0)
-script = ExtResource("1_o7al6")
+script = ExtResource("1_ry45r")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player" unique_id=1635029391]
 mesh = SubResource("CapsuleMesh_fg4av")
@@ -60,18 +60,20 @@ color = Color(0, 0, 0, 1)
 environment = SubResource("Environment_fg4av")
 
 [node name="Monster" type="Sprite3D" parent="." unique_id=235989631 node_paths=PackedStringArray("player")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0267968, -8.60475)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.431114, 1.0267968, -5.1825433)
 billboard = 1
 shaded = true
-texture = ExtResource("2_vqx7l")
-script = ExtResource("3_ayauq")
+texture = ExtResource("2_dsb46")
+script = ExtResource("3_uofsi")
 player = NodePath("../Player")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="Monster" unique_id=295774213]
 
 [node name="Tree2" type="Sprite3D" parent="." unique_id=1119474569]
 transform = Transform3D(3.248908, 0, 0, 0, 3.248908, 0, 0, 0, 1, 0, 2.3574953, -14.905019)
 billboard = 1
 shaded = true
-texture = ExtResource("2_vqx7l")
+texture = ExtResource("2_dsb46")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=774253650]
 
@@ -87,5 +89,5 @@ offset_bottom = 146.0
 grow_horizontal = 0
 grow_vertical = 2
 step = 0.01
-script = ExtResource("4_f38lv")
+script = ExtResource("4_jenrn")
 player = NodePath("../../Player")
