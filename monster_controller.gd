@@ -1,7 +1,7 @@
 extends Sprite3D
 
 @export var player : Player
-@export var speed: float = 25.0
+@export var speed: float = 1.0
 var attack_player: bool = false
 @onready var visible_on_screen: VisibleOnScreenNotifier3D = $VisibleOnScreenNotifier3D
 
