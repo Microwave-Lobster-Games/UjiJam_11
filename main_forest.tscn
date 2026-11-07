@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://df3mtjfkkaew2"]
+
+[ext_resource type="Script" uid="uid://61osqrps1bvk" path="res://player_movement.gd" id="1_6t3sc"]
+[ext_resource type="Texture2D" uid="uid://b3qx7gkxvoak0" path="res://icon.svg" id="2_6a6d0"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fg4av"]
+size = Vector2(40, 40)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_fg4av"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fg4av"]
+
+[sub_resource type="Environment" id="Environment_fg4av"]
+background_mode = 1
+background_color = Color(0.096204735, 0.09620475, 0.096204735, 1)
+
+[node name="MainForest" type="Node3D" unique_id=2076514014]
+
+[node name="Floor" type="MeshInstance3D" parent="." unique_id=219060658]
+mesh = SubResource("PlaneMesh_fg4av")
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=754353529]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0771925, 0)
+script = ExtResource("1_6t3sc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player" unique_id=1635029391]
+mesh = SubResource("CapsuleMesh_fg4av")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=430434915]
+shape = SubResource("CapsuleShape3D_fg4av")
+
+[node name="Camera3D" type="Camera3D" parent="Player" unique_id=1368353217]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.47828245, 0)
+
+[node name="CloseLight" type="OmniLight3D" parent="Player" unique_id=1585141290]
+light_color = Color(1, 0.79607844, 0.43529412, 1)
+light_energy = 0.5
+omni_range = 2.5
+
+[node name="Far Light" type="OmniLight3D" parent="Player" unique_id=217192337]
+light_color = Color(0.8156863, 0.5058824, 0.34901962, 1)
+light_energy = 0.75
+omni_attenuation = 1.079
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1387247104]
+environment = SubResource("Environment_fg4av")
+
+[node name="Tree1" type="Sprite3D" parent="." unique_id=235989631]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0267968, -8.60475)
+billboard = 1
+shaded = true
+texture = ExtResource("2_6a6d0")
+
+[node name="Tree2" type="Sprite3D" parent="." unique_id=1119474569]
+transform = Transform3D(3.248908, 0, 0, 0, 3.248908, 0, 0, 0, 1, 0, 2.3574953, -14.905019)
+billboard = 1
+shaded = true
+texture = ExtResource("2_6a6d0")

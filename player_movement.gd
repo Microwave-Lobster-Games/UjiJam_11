@@ -1,0 +1,35 @@
+extends CharacterBody3D
+
+@export var SENSITIVITY: float = 0.1
+
+var twist_input: float = 0.0
+var pitch_input: float = 0.0
+const SPEED = 5.0
+
+func _ready() -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventMouseMotion:
+		twist_input -= event.screen_relative.x * SENSITIVITY
+		pitch_input -= event.screen_relative.y * SENSITIVITY
+		pitch_input = clamp(pitch_input, -85, 85)
+
+func _physics_process(delta: float) -> void:
+	var input_dir := Input.get_vector("movement_left", "movement_right", "movement_up", "movement_down")
+	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	if direction:
+		velocity.x = direction.x * SPEED
+		velocity.z = direction.z * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.z = move_toward(velocity.z, 0, SPEED)
+
+	move_and_slide()
+
+func _process(delta: float) -> void:
+	var current_q = basis.get_rotation_quaternion()
+	var twist_q = Quaternion(Vector3.UP, deg_to_rad(twist_input))
+	var pitch_q = Quaternion(Vector3.RIGHT, deg_to_rad(pitch_input))
+	var smoothed_q = current_q.slerp(twist_q * pitch_q, delta * 20.0)
+	basis = Basis(smoothed_q)
