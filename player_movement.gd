@@ -10,6 +10,7 @@ var eyes_closed = false
 var twist_input: float = 0.0
 var pitch_input: float = 0.0
 const SPEED = 5.0
+var allow_close_eyes: bool = true
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -21,7 +22,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		pitch_input = clamp(pitch_input, -85, 85)
 	
 	if event is InputEventMouseButton:
-		if event.get_button_index() == 1: #left click
+		if event.get_button_index() == 1 and allow_close_eyes: #left click
 			eyes_closed = !eyes_closed
 			open_close_eyes(eyes_closed)
 			
@@ -48,4 +49,3 @@ func _process(delta: float) -> void:
 	var pitch_q = Quaternion(Vector3.RIGHT, deg_to_rad(pitch_input))
 	var smoothed_q = current_q.slerp(twist_q * pitch_q, delta * 20.0)
 	basis = Basis(smoothed_q)
-	
