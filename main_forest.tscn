@@ -12,6 +12,10 @@
 [sub_resource type="PlaneMesh" id="PlaneMesh_fg4av"]
 size = Vector2(40, 40)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_rsymn"]
+atlas = ExtResource("2_rsymn")
+region = Rect2(0, 0, 404, 1472)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_nmxcf"]
 atlas = ExtResource("2_rsymn")
 region = Rect2(0, 0, 404, 1472)
@@ -30,7 +34,10 @@ region = Rect2(1212, 0, 404, 1472)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rsymn"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rsymn")
+}],
 "loop": 1,
 "name": &"default",
 "speed": 5.0
@@ -85,7 +92,6 @@ script = ExtResource("1_6t3sc")
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Player" unique_id=227793922]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
 sprite_frames = SubResource("SpriteFrames_rsymn")
-animation = &"walking"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player" unique_id=1635029391]
 visible = false

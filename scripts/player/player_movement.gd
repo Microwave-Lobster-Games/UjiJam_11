@@ -3,6 +3,8 @@ class_name Player
 
 @export var SENSITIVITY: float = 0.1
 @onready var eye_lids = $EyeLids
+@onready var animation: AnimatedSprite3D = $AnimatedSprite3D
+
 signal eyes_changed(open : bool)
 
 var eyes_closed = false
@@ -36,9 +38,11 @@ func _physics_process(_delta: float) -> void:
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
+		animation.play("walking")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
+		animation.play("default")
 
 	move_and_slide()
 
