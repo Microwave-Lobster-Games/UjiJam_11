@@ -1,17 +1,18 @@
 extends Sprite3D
 
 @export var player : Player
+@export var speed: float = 25.0
+var attack_player: bool = false
 @onready var visible_on_screen: VisibleOnScreenNotifier3D = $VisibleOnScreenNotifier3D
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	player.eyes_changed.connect(spawn_dissapear)
 	visible_on_screen.screen_exited.connect(dissapear)
+	visible_on_screen.screen_entered.connect(attack)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if attack_player and player: 
+		global_position = global_position.move_toward(player.global_position, speed * delta)
 
 func dissapear():
 	var camera = get_viewport().get_camera_3d()
@@ -30,6 +31,7 @@ func dissapear():
 		attempts += 1
 		
 	self.position = new_pos
+	attack_player = false
 
 func spawn_dissapear(spawn : bool):
 	print(spawn)
@@ -42,5 +44,7 @@ func spawn_dissapear(spawn : bool):
 		var rand_z = randf_range(-15, 15)
 		
 		self.position = Vector3(rand_x, 1.027, rand_z)
-	
-	
+
+func attack() -> void:
+	if not player: return
+	attack_player = true
