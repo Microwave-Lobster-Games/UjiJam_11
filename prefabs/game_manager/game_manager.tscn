@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c1ghtny02s0xm"]
+
+[ext_resource type="Script" uid="uid://dycff2n5urnvw" path="res://scripts/game_manager.gd" id="1_mp1kd"]
+[ext_resource type="PackedScene" uid="uid://bthh4m50i25qf" path="res://prefabs/ui/end_text.tscn" id="2_21igh"]
+
+[node name="GameManager" type="Node2D" unique_id=1284665186]
+script = ExtResource("1_mp1kd")
+end_game_text = ExtResource("2_21igh")

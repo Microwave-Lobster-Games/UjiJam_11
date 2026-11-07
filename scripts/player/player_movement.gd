@@ -25,13 +25,12 @@ func _unhandled_input(event: InputEvent) -> void:
 		if event.get_button_index() == 1 and allow_close_eyes: #left click
 			eyes_closed = !eyes_closed
 			open_close_eyes(eyes_closed)
-			
 
 func open_close_eyes(open : bool):
 	eye_lids.visible = open
 	emit_signal("eyes_changed", open)
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var input_dir := Input.get_vector("movement_left", "movement_right", "movement_up", "movement_down")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:

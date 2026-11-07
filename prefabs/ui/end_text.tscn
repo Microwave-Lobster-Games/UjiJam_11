@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bthh4m50i25qf"]
+
+[ext_resource type="Script" uid="uid://652c2e18ww3j" path="res://scripts/ui/end_game.gd" id="1_o5ktj"]
+[ext_resource type="PackedScene" uid="uid://divm4lq1eijmw" path="res://title_screen.tscn" id="2_r62um"]
+[ext_resource type="PackedScene" uid="uid://df3mtjfkkaew2" path="res://main_forest.tscn" id="3_wa8rs"]
+
+[node name="EndText" type="Node2D" unique_id=1049072640]
+process_mode = 2
+script = ExtResource("1_o5ktj")
+main_menu = ExtResource("2_r62um")
+game_scene = ExtResource("3_wa8rs")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=914493210]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=961732230]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=778156665]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Placeholder"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer" unique_id=1909167418]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer" unique_id=244341311]
+layout_mode = 2
+text = "Retry"
+
+[node name="Button2" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer" unique_id=1915542878]
+layout_mode = 2
+text = "Main menu
+"

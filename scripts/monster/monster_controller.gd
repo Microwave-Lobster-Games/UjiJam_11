@@ -4,6 +4,7 @@ extends Sprite3D
 @export var speed: float = 1.0
 var attack_player: bool = false
 @onready var visible_on_screen: VisibleOnScreenNotifier3D = $VisibleOnScreenNotifier3D
+@onready var far_light: OmniLight3D = %"Far Light"
 
 func _ready() -> void:
 	player.eyes_changed.connect(spawn_dissapear)
@@ -11,8 +12,11 @@ func _ready() -> void:
 	visible_on_screen.screen_entered.connect(attack)
 
 func _process(delta: float) -> void:
-	if attack_player and player: 
+	if attack_player and player and is_in_range(): 
 		global_position = global_position.move_toward(player.global_position, speed * delta)
+	
+	if self.global_position.distance_to(player.global_position) <= 0.01: 
+		GameManager.end_game(false)
 
 func dissapear():
 	var camera = get_viewport().get_camera_3d()
@@ -34,7 +38,7 @@ func dissapear():
 	attack_player = false
 
 func spawn_dissapear(spawn : bool):
-	print(spawn)
+	#print(spawn)
 	if spawn:
 		visible = false
 	
@@ -48,3 +52,6 @@ func spawn_dissapear(spawn : bool):
 func attack() -> void:
 	if not player: return
 	attack_player = true
+
+func is_in_range() -> bool: 
+	return self.global_position.distance_to(player.global_position) <= far_light.omni_range
