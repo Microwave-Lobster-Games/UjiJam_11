@@ -66,6 +66,8 @@ texture = ExtResource("2_6a6d0")
 script = ExtResource("3_hg5i0")
 player = NodePath("../Player")
 
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="Monster" unique_id=1923254183]
+
 [node name="Tree2" type="Sprite3D" parent="." unique_id=1119474569]
 transform = Transform3D(3.248908, 0, 0, 0, 3.248908, 0, 0, 0, 1, 0, 2.3574953, -14.905019)
 billboard = 1
