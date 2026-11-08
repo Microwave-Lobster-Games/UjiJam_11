@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b3q6mqq3crkpw"
-path="res://.godot/imported/somna_map.fbx-a2f00af185527c29b845d1ba9298ae8a.scn"
+path="res://.godot/imported/somna_map.fbx-9f9670bf8912461478a84681d11de7b6.scn"
 
 [deps]
 
-source_file="res://assets/somna_map.fbx"
-dest_files=["res://.godot/imported/somna_map.fbx-a2f00af185527c29b845d1ba9298ae8a.scn"]
+source_file="res://assets/art/somna_map.fbx"
+dest_files=["res://.godot/imported/somna_map.fbx-9f9670bf8912461478a84681d11de7b6.scn"]
 
 [params]
 

@@ -1,10 +1,14 @@
 [gd_scene format=3 uid="uid://500v635k66na"]
 
-[ext_resource type="Script" uid="uid://xvqplo7ej8l0" path="res://key_controller.gd" id="1_p0yg6"]
+[ext_resource type="Script" uid="uid://xvqplo7ej8l0" path="res://scripts/key/key_controller.gd" id="1_p0yg6"]
 [ext_resource type="Texture2D" uid="uid://b3qx7gkxvoak0" path="res://icon.svg" id="2_krfvd"]
+[ext_resource type="AudioStream" uid="uid://h52uhk1r6hxy" path="res://assets/sounds/hum.ogg" id="2_vsnh1"]
+[ext_resource type="AudioStream" uid="uid://d0adsmsnvmslp" path="res://assets/sounds/rock_smash.ogg" id="3_gorj8"]
+[ext_resource type="AudioStream" uid="uid://bivu23dewouf2" path="res://assets/sounds/466451__patrick_corra__loopable-hum.wav" id="4_j3uru"]
 
 [node name="Key" type="Node3D" unique_id=1918541471]
 script = ExtResource("1_p0yg6")
+sounds = Array[AudioStream]([ExtResource("2_vsnh1"), ExtResource("3_gorj8"), ExtResource("4_j3uru")])
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=2013479939]
 billboard = 1
@@ -20,3 +24,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.4605002)
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -1.2125975, 0)
 spot_range = 10.0
 spot_angle = 10.0
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=955323245]
+unit_size = 1.26

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dp75ayve5vbuc"
-path.s3tc="res://.godot/imported/trees.png-239925b3d061bf30fe051d4c6f066bb6.s3tc.ctex"
+uid="uid://dspctmntvndev"
+path.s3tc="res://.godot/imported/tallman.png-11546b281d8c48e06a7016a82223bd16.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/trees.png"
-dest_files=["res://.godot/imported/trees.png-239925b3d061bf30fe051d4c6f066bb6.s3tc.ctex"]
+source_file="res://assets/art/tallman.png"
+dest_files=["res://.godot/imported/tallman.png-11546b281d8c48e06a7016a82223bd16.s3tc.ctex"]
 
 [params]
 

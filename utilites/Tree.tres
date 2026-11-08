@@ -1,7 +1,7 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://by8fv05kg4iop"]
 
 [ext_resource type="Shader" uid="uid://rxl1ap1syl6" path="res://utilites/Tree.gdshader" id="1_ja5im"]
-[ext_resource type="Texture2D" uid="uid://bkg7dy1i0j2wj" path="res://assets/only_trees.png" id="2_tirig"]
+[ext_resource type="Texture2D" uid="uid://bkg7dy1i0j2wj" path="res://assets/art/only_trees.png" id="2_tirig"]
 
 [resource]
 render_priority = 0

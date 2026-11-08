@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://ck7g67b5iy2rl"]
 
-[ext_resource type="Texture2D" uid="uid://chniowlvxc1j0" path="res://assets/background_intro.png" id="1_fqpck"]
+[ext_resource type="Script" uid="uid://c7x1owlgtocdi" path="res://scripts/intro/close_eyes.gd" id="1_2glrg"]
+[ext_resource type="Texture2D" uid="uid://chniowlvxc1j0" path="res://assets/art/background_intro.png" id="1_fqpck"]
+[ext_resource type="AudioStream" uid="uid://mrshfk1u8rpb" path="res://assets/sounds/386926__gumballworld__slow-toy-music-box-brahms-lullaby.mp3" id="2_x3ncd"]
 
 [node name="IntroScene" type="Control" unique_id=376186650]
 layout_mode = 3
@@ -9,6 +11,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_2glrg")
 
 [node name="Label" type="Label" parent="." unique_id=1723475754]
 layout_mode = 0
@@ -32,3 +36,37 @@ grow_vertical = 2
 texture = ExtResource("1_fqpck")
 expand_mode = 1
 stretch_mode = 6
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1272487801]
+stream = ExtResource("2_x3ncd")
+autoplay = true
+
+[node name="EyeLids" type="CanvasLayer" parent="." unique_id=364541848]
+
+[node name="Label2" type="RichTextLabel" parent="EyeLids" unique_id=1636182277]
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -408.0
+offset_top = -89.5
+offset_right = 408.0
+offset_bottom = 89.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 64
+text = "Microwave Lobster Games
+Present"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="ColorRect" parent="EyeLids" unique_id=1598748978]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="UjiJam"
-run/main_scene="uid://divm4lq1eijmw"
+run/main_scene="uid://ck7g67b5iy2rl"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
