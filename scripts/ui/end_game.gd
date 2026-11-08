@@ -1,22 +1,23 @@
 extends Node
 
-@onready var label: Label = $CanvasLayer/VBoxContainer/Label
-@onready var button_retry: Button = $CanvasLayer/VBoxContainer/HBoxContainer/Button
-@onready var button_menu: Button = $CanvasLayer/VBoxContainer/HBoxContainer/Button2
+@onready var button_retry: Button = $Button
 @export var main_menu: PackedScene
 @export var game_scene: PackedScene
+@onready var texture_rect: TextureRect = $TextureRect
+@onready var texture_rect_2: TextureRect = $TextureRect2
 
 func _ready() -> void:
 	button_retry.pressed.connect(_retry)
-	button_menu.pressed.connect(_change_scene)
 
-func setup(text_plc: String) -> void: 
-	label.text = text_plc
+func setup(won: bool) -> void: 
+	if won: 
+		texture_rect.show()
+		texture_rect_2.hide()
+	else: 
+		texture_rect.hide()
+		texture_rect_2.show()
 	
 func _retry() -> void: 
 	get_tree().change_scene_to_packed(game_scene)
 	GameManager.reset()
 	
-func _change_scene() -> void: 
-	get_tree().change_scene_to_packed(main_menu)
-	GameManager.reset()

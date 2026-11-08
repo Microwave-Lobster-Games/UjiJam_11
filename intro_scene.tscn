@@ -1,8 +1,14 @@
 [gd_scene format=3 uid="uid://ck7g67b5iy2rl"]
 
 [ext_resource type="Script" uid="uid://c7x1owlgtocdi" path="res://scripts/intro/close_eyes.gd" id="1_2glrg"]
-[ext_resource type="Texture2D" uid="uid://chniowlvxc1j0" path="res://assets/art/background_intro.png" id="1_fqpck"]
+[ext_resource type="Texture2D" uid="uid://c4t1lidi7kg50" path="res://assets/art/intro_bg.png" id="2_2glrg"]
+[ext_resource type="Texture2D" uid="uid://ceee3tqqvn2ig" path="res://assets/art/stuff.png" id="2_b1u3c"]
 [ext_resource type="AudioStream" uid="uid://mrshfk1u8rpb" path="res://assets/sounds/386926__gumballworld__slow-toy-music-box-brahms-lullaby.mp3" id="2_x3ncd"]
+[ext_resource type="Texture2D" uid="uid://v3j1u71recf5" path="res://assets/art/intro_fg.png" id="3_o8unc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pkkn6"]
+atlas = ExtResource("2_b1u3c")
+region = Rect2(447.896, 831.86646, 1884.8135, 778.38904)
 
 [node name="IntroScene" type="Control" unique_id=376186650]
 layout_mode = 3
@@ -14,18 +20,17 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_2glrg")
 
-[node name="Label" type="Label" parent="." unique_id=1723475754]
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=996830771]
 layout_mode = 0
-offset_left = 876.0
-offset_top = 545.0
-offset_right = 1145.0
-offset_bottom = 638.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 32
-text = "Press LMK to close your eyes"
-autowrap_mode = 3
+offset_left = 822.328
+offset_top = 10.0
+offset_right = 4043.0474
+offset_bottom = 1339.9999
+scale = Vector2(0.1, 0.1)
+texture = SubResource("AtlasTexture_pkkn6")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=673469267]
+modulate = Color(0.5609549, 0.5609549, 0.5609549, 1)
 z_index = -1
 layout_mode = 1
 anchors_preset = 15
@@ -33,7 +38,20 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_fqpck")
+texture = ExtResource("2_2glrg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1608550557]
+modulate = Color(0.46229059, 0.46229059, 0.46229059, 1)
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_o8unc")
 expand_mode = 1
 stretch_mode = 6
 

@@ -2,7 +2,7 @@ extends Sprite3D
 
 @export var player : Player
 @export var radius_spawn: float = 20
-@export var speed: float = 1.0
+@export var speed: float = 25.0
 @onready var visible_on_screen: VisibleOnScreenNotifier3D = $VisibleOnScreenNotifier3D
 @onready var far_light: OmniLight3D = %"Far Light"
 @onready var close_light: OmniLight3D = %CloseLight

@@ -1,19 +1,25 @@
 [gd_scene format=3 uid="uid://500v635k66na"]
 
 [ext_resource type="Script" uid="uid://xvqplo7ej8l0" path="res://scripts/key/key_controller.gd" id="1_p0yg6"]
-[ext_resource type="Texture2D" uid="uid://b3qx7gkxvoak0" path="res://icon.svg" id="2_krfvd"]
 [ext_resource type="AudioStream" uid="uid://h52uhk1r6hxy" path="res://assets/sounds/hum.ogg" id="2_vsnh1"]
 [ext_resource type="AudioStream" uid="uid://d0adsmsnvmslp" path="res://assets/sounds/rock_smash.ogg" id="3_gorj8"]
 [ext_resource type="AudioStream" uid="uid://bivu23dewouf2" path="res://assets/sounds/466451__patrick_corra__loopable-hum.wav" id="4_j3uru"]
+[ext_resource type="Texture2D" uid="uid://cynr878cx7rbd" path="res://assets/art/eye_closed.tres" id="5_gorj8"]
+[ext_resource type="Texture2D" uid="uid://y7wpfu7pckfb" path="res://assets/art/eyes.png" id="5_vsnh1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vsnh1"]
+atlas = ExtResource("5_vsnh1")
+region = Rect2(19, 0, 159, 92)
 
 [node name="Key" type="Node3D" unique_id=1918541471]
 script = ExtResource("1_p0yg6")
 sounds = Array[AudioStream]([ExtResource("2_vsnh1"), ExtResource("3_gorj8"), ExtResource("4_j3uru")])
+eye_closed = ExtResource("5_gorj8")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=2013479939]
 billboard = 1
 shaded = true
-texture = ExtResource("2_krfvd")
+texture = SubResource("AtlasTexture_vsnh1")
 
 [node name="AreaLight3D" type="AreaLight3D" parent="Sprite3D" unique_id=592286999]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.4605002)

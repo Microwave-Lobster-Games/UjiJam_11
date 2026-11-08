@@ -7,14 +7,17 @@ extends Control
 var fade_duration: float = 1.0
 var is_fading: bool = false 
 
+const TARGET_SCENE = "res://main_forest.tscn"
+
 func _ready() -> void: 
 	credits.modulate = Color.TRANSPARENT
 	eye_lids.modulate = Color.TRANSPARENT
 	
+	ResourceLoader.load_threaded_request(TARGET_SCENE)
+	
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.get_button_index() == 1: # Left click
 		if is_fading: 
-			print("return") 
 			return
 		is_fading = true
 		run_transition_sequence()
@@ -37,4 +40,15 @@ func run_transition_sequence() -> void:
 	fade_out_tween.tween_property(audio_stream, "volume_db", -80, fade_duration)
 	await fade_out_tween.finished
 	
-	get_tree().change_scene_to_file("res://main_forest.tscn")
+
+	ResourceLoader.load_threaded_request(TARGET_SCENE)
+	
+	while ResourceLoader.load_threaded_get_status(TARGET_SCENE) == ResourceLoader.THREAD_LOAD_IN_PROGRESS:
+		await get_tree().process_frame
+		
+	var packed_scene = ResourceLoader.load_threaded_get(TARGET_SCENE)
+	if packed_scene:
+		get_tree().change_scene_to_packed(packed_scene)
+	else:
+		get_tree().change_scene_to_file(TARGET_SCENE)
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

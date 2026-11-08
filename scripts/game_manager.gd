@@ -11,6 +11,9 @@ func _process(_delta: float) -> void:
 	
 func end_game(win: bool) -> void: 
 	if win: 
+		get_tree().paused = true
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		show_text(true)
 		pass
 		
 	else: 
@@ -22,9 +25,9 @@ func show_text(win: bool) -> void:
 	var text_scene = end_game_text.instantiate()
 	add_child(text_scene)
 	if win: 
-		text_scene.setup("You won")
+		text_scene.setup(true)
 	else:
-		text_scene.setup("Skill issue")
+		text_scene.setup(false)
 
 func reset() -> void: 
 	get_tree().paused = false

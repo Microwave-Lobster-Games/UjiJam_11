@@ -1,5 +1,5 @@
 shader_type spatial;
-render_mode unshaded, cull_disabled;
+render_mode cull_disabled;
 
 uniform sampler2D texture_albedo : source_color, filter_nearest;
 uniform vec4 target_color : source_color = vec4(1.0, 0.0, 0.0, 1.0); 

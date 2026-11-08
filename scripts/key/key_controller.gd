@@ -9,7 +9,8 @@ extends Node3D
 var key_tween: Tween = null
 var is_activated: bool = false
 var is_moving_down: bool = false
-
+@export var eye_closed: AtlasTexture
+@onready var sprite_3d: Sprite3D = $Sprite3D
 
 func _ready() -> void:
 	player.eyes_changed.connect(key_reset)
@@ -58,11 +59,12 @@ func _on_activation_finished() -> void:
 	if is_activated or global_position.distance_to(player.global_position) > 10.0:
 		return
 	is_activated = true
+	sprite_3d.texture = eye_closed
 	if not sounds.is_empty():
 		if audio_stream.stream != sounds[1] or not audio_stream.is_playing():
 			audio_stream.stream = sounds[1]
 			audio_stream.play()
-	monster.far_light.omni_range += 10
+	monster.far_light.omni_range += 5
 	monster.close_light.omni_range += 5
 	GameManager.activated_keys += 1
 	GameManager.paranoia_fill_speed += 10

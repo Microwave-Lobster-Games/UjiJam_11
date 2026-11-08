@@ -27,10 +27,10 @@ surface_material_override/0 = SubResource("ShaderMaterial_jx2ox")
 size = Vector2i(2000, 2000)
 
 [node name="Camera3D" type="Camera3D" parent="SubViewport" unique_id=733632625]
-transform = Transform3D(5.4335207e-08, 0, -1, 0, 1, 0, 1, 0, 5.4335207e-08, -8.775842, 6.247045, 3.89579)
+transform = Transform3D(5.438425e-08, 0, -1, 0, 1, 0, 1, 0, 5.438425e-08, -8.767927, 6.2425623, 3.8925357)
 projection = 2
 fov = 70.01
 size = 10.0
-frustum_offset = Vector2(-3.8957896, -6.247045)
-near = 8.825842
-far = 61.455048
+frustum_offset = Vector2(-3.8925352, -6.2425623)
+near = 8.817927
+far = 61.445435

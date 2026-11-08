@@ -1,4 +1,3 @@
-@tool 
 extends MultiMeshInstance3D
 
 @export var tree_mesh: Mesh:
@@ -14,24 +13,38 @@ extends MultiMeshInstance3D
 @export var seed_value: int = 12345
 @export var tree_height: float = 2.0
 
-@export var ground_node: StaticBody3D 	
+@export var ground_node: StaticBody3D     
 
 @export var generate_in_editor: bool = false: 
 	set(value):
 		if Engine.is_editor_hint():
 			generate_trees() 
 
-func _ready() -> void: 
-	if not Engine.is_editor_hint(): 
-		generate_trees()
+func _ready() -> void:
+	# Do nothing at runtime! The trees are already baked into the scene.
+	pass
 
 func generate_trees() -> void: 
+	if not Engine.is_editor_hint():
+		return # Never run physics raycasts at runtime in builds!
+		
 	if not tree_mesh:
 		printerr("Please assign a tree mesh to the MultiMeshInstance3D!")
 		return
 		
 	if not ground_node:
 		printerr("Please assign the Ground StaticBody3D in the Inspector!")
+		return
+		
+	# Ensure the world and physics are ready in editor
+	var world_3d = get_world_3d()
+	if not world_3d:
+		printerr("World3D is not ready yet.")
+		return
+		
+	var space_state = world_3d.direct_space_state
+	if not space_state:
+		printerr("Physics direct space state is not ready.")
 		return
 		
 	var mm = MultiMesh.new()
@@ -43,8 +56,6 @@ func generate_trees() -> void:
 	
 	var rng = RandomNumberGenerator.new()
 	rng.seed = seed_value
-	
-	var space_state = get_world_3d().direct_space_state
 	
 	var successful_spawns = 0
 	var max_attempts = tree_count * 4 
@@ -88,4 +99,4 @@ func generate_trees() -> void:
 		successful_spawns += 1
 		
 	mm.instance_count = successful_spawns
-	print("Successfully seeded ", successful_spawns, " trees strictly on the ground shape!")
+	print("Successfully baked ", successful_spawns, " trees into the scene!")

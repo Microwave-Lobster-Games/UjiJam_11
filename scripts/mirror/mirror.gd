@@ -26,9 +26,19 @@ func _ready() -> void:
 	else: 
 		main_cam = get_viewport().get_camera_3d()
 	
+	if not main_cam:
+		return
+		
 	last_main_cam_pos = main_cam.global_position
+	
+	sub_viewport.render_target_update_mode = SubViewport.UPDATE_DISABLED
+	
 	setup()
-	update_cam()
+	
+	await get_tree().process_frame
+	if is_instance_valid(main_cam):
+		update_cam()
+		sub_viewport.render_target_update_mode = SubViewport.UPDATE_WHEN_VISIBLE
 
 func setup() -> void: 
 	var viewport_texture = sub_viewport.get_texture()
@@ -36,7 +46,10 @@ func setup() -> void:
 	camera_3d.fov = main_cam.fov
 	quad.mesh.size = size
 	sub_viewport.size = size * pixels_per_unit
-	quad.get_active_material(0).set_shader_parameter(&"tex", viewport_texture)
+	
+	var mat = quad.get_active_material(0) as ShaderMaterial
+	if mat:
+		mat.set_shader_parameter(&"tex", viewport_texture)
 	
 	
 func update_cam() -> void: 

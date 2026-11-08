@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="UjiJam"
+config/name="Somna"
 run/main_scene="uid://ck7g67b5iy2rl"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://bar0aoqbow07s"
 
 [autoload]
 
@@ -59,4 +59,5 @@ escape={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
 occlusion_culling/use_occlusion_culling=true
